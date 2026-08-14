@@ -2,7 +2,7 @@
 
 An AI-powered daily briefing generator for founders and leadership teams running fast-moving, multi-workstream organizations. Paste in raw updates from customers, suppliers, and hiring pipelines — get back an instant RED/AMBER/GREEN risk dashboard with AI-generated narrative summaries.
 
-**[Live demo](#)** — works immediately with the built-in rule-based risk analysis, no setup required. Adding AI-generated narrative briefings on top needs a free [Anthropic API key](https://console.anthropic.com), used client-side only and never stored or sent anywhere but api.anthropic.com. Please use fictional/sample data only.
+**[Live demo](https://founder-briefing-copilot.vercel.app)** — works immediately with the built-in rule-based risk analysis, no setup required. Adding AI-generated narrative briefings on top needs a free [Anthropic API key](https://console.anthropic.com), used client-side only and never stored or sent anywhere but api.anthropic.com. Please use fictional/sample data only.
 
 ## Who it's for
 
