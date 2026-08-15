@@ -40,4 +40,4 @@ npm run dev
 
 ## Status
 
-This is a prototype built to explore a problem space — not a finished product. Built by [Jane Natividad](https://github.com/jane-natividad).
+This is a prototype built to explore a problem space — not a finished product. Built by [Jane Natividad](https://github.com/jane-natividad) — see more at [jane-natividad.github.io](https://jane-natividad.github.io).
