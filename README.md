@@ -1,43 +1,57 @@
 # Founder Briefing Copilot
 
-An AI-powered daily briefing generator for founders and leadership teams running fast-moving, multi-workstream organizations. Paste in raw updates from customers, suppliers, and hiring pipelines — get back an instant RED/AMBER/GREEN risk dashboard with AI-generated narrative summaries.
+Turns scattered status updates into a 30 second red, amber and green briefing.
 
-**[Live demo](https://founder-briefing-copilot.vercel.app)** — works immediately with the built-in rule-based risk analysis, no setup required. Adding AI-generated narrative briefings on top needs your own LLM API key — any OpenAI-compatible API (OpenAI, OpenRouter, Groq, Together, or a local Llama server) or an Anthropic-style API. The key is used client-side only and is never stored or sent anywhere except the endpoint you choose. Please use fictional/sample data only.
+**[Try the live demo](https://founder-briefing-copilot.vercel.app)**. It works straight away with no setup. To try the AI step, paste your own LLM API key. It works with any OpenAI compatible API (OpenAI, OpenRouter, Groq, Together, or Llama running on your own machine) or an Anthropic style API. Your key stays in your browser and is only sent to the endpoint you choose. Please use fictional or sample data only.
+
+## Why I built it
+
+Working alongside founders, I noticed how much of their morning went into piecing together updates from email and chat before they could decide anything. I wanted that to take thirty seconds, and to keep working even on days the AI is unavailable.
+
+## The problem
+
+Founders and operations leaders at early stage companies spend a surprising amount of time stitching together updates from customers, suppliers and hiring just to answer one question: what needs my attention today?
+
+## What I built
+
+A daily briefing tool that reads customer, supplier and hiring updates, flags risk with a rule based check, and adds an AI written narrative when you connect your own model.
 
 ## Who it's for
 
-Founders, operations leads, and program/portfolio leads who receive status updates from multiple sources (customers, vendors, internal teams) and need a fast, consistent way to spot risk and decide what needs attention today — without manually re-reading every update themselves.
-
-## Why it matters
-
-Founders and operations leaders at an early-stage biotech startup spend a disproportionate amount of time synthesizing status updates scattered across emails, Slack threads, and meeting notes just to answer a simple question: "what needs my attention today?" This tool turns that synthesis into a 30-second morning ritual, so leadership time goes to decisions, not data-gathering.
+Founders, operations leads and program leads juggling updates from many sources.
 
 ## What it does
 
-- Accepts daily operational updates across three categories: customers, suppliers, hiring
-- Auto-detects risk signals (delays, blockers, urgency keywords) using rule-based analysis
-- Outputs color-coded RAG (Red/Amber/Green) status cards with actionable summaries
-- Optional bring-your-own-LLM integration (any OpenAI-compatible or Anthropic-style API, including Llama models) for AI-generated narrative briefings on top of the rule-based signals
+- Accepts daily updates in three simple categories: customers, suppliers and hiring
+- Flags risk signals such as delays, blockers and urgency using clear rules
+- Shows colour coded status cards with a suggested next action for each
+- Adds an AI written chief of staff summary when you connect your own model
 
-## Product decisions that mattered more than the model
+## Decisions that shaped it
 
-1. **Deterministic fallback, not just AI** — if the API is unavailable, the tool still produces a useful keyword-based analysis rather than failing silently
-2. **RAG status over raw text** — leaders scan color first, read narrative second; the interface is built around that reading pattern
-3. **Three fixed categories, not open-ended tagging** — keeping the input structure simple and consistent makes the daily habit sustainable
+1. **Always gives an answer:** the rule based analysis works even without an AI model.
+2. **Colour first:** leaders scan status before they read the detail.
+3. **Three simple categories:** a consistent input makes the daily habit easy to keep.
+
+## Key takeaway
+
+A rule based fallback keeps it useful even when no AI is connected.
 
 ## Built with
 
-- React + Vite
+- React and Vite
 - Tailwind CSS
-- Any LLM API, provider-agnostic: OpenAI-compatible or Anthropic-style (optional)
+- Any LLM API (optional, bring your own key)
 
-## Run locally
+## Run it locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Status
+## About this project
 
-This is a prototype built to explore a problem space — not a finished product. Built by [Jane Natividad](https://github.com/jane-natividad) — see more at [jane-natividad.github.io](https://jane-natividad.github.io).
+This is a working prototype I built to explore a real problem space. It uses illustrative, fictional data and isn't connected to any organisation's systems. You can find more of my work at [jane-natividad.github.io](https://jane-natividad.github.io).
+
+Built by [Jane Natividad](https://github.com/jane-natividad).

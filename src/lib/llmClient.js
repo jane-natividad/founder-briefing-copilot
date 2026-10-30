@@ -15,7 +15,7 @@ export const PROVIDERS = {
   anthropic: {
     label: 'Anthropic Messages API',
     baseUrl: 'https://api.anthropic.com/v1',
-    model: 'claude-sonnet-4-5',
+    model: '',
     keyPlaceholder: 'Your API key',
   },
 }
@@ -40,6 +40,7 @@ export function endpointHost(config) {
  * @param {{system?:string, prompt:string, maxTokens?:number}} request
  */
 export async function callLLM(config, { system, prompt, maxTokens = 1024 }) {
+  if (!config.model || !config.model.trim()) throw new Error('Add a model name under "Endpoint & model (advanced)".')
   const base = (config.baseUrl || '').replace(/\/+$/, '')
   let res
   if (config.provider === 'anthropic') {
